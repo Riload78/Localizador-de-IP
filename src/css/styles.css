@@ -1,0 +1,11 @@
+@import url('./header.css');
+@import url('./search.css');
+@import url('./geo-detail.css');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    @apply bg-slate-100;
+}
+

@@ -1,0 +1,9 @@
+.data-ip-wrapper{
+    @apply py-10 container mx-auto;
+    .view-content{
+        @apply grid grid-cols-4 gap-4 mx-auto; 
+        .item{
+            @apply  bg-slate-800 overflow-hidden;
+        }
+    }
+}

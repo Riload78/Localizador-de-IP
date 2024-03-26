@@ -1,0 +1,4 @@
+header {
+    @apply flex justify-center items-center px-8 py-4 bg-slate-700 text-slate-50;
+
+}

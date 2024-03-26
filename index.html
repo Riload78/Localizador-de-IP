@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32"
+      href="./images/favicon-32x32.png">
+
+    <title>Frontend Mentor | IP Address Tracker</title>
+    <link rel="stylesheet" href="./dist/styles.css">
+
+  </head>
+  <body>
+    <header>
+      <div class="nav-wrapper">
+        <nav>
+          <ul>
+            <li>
+              Trakeador de IPs
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="main-wrapper">
+      <section class="search-wrapper">
+        <div class="mx-autow-full">
+          <div class="content">
+            <h2 class="mx-auto max-w-2xl text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              Buscar por IP o dominio
+            </h2>
+
+            <form id="ipTrackerForm" class="form-wrapper" action="/search">
+              <fieldset class="fieldset" for="search-bar">
+                <input id="search-bar" placeholder="your keyword here" name="search"
+                  class="input"
+                  required>
+                <button type="submit" class="btn">
+                  <span class="inner">
+                      Buscar
+                  </span>
+                </button>
+              </fieldset>
+            </form>
+
+            <svg viewBox="0 0 1024 1024"
+              class="absolute left-1/2 top-1/2 -z-10 h-[64rem] w-[64rem] -translate-x-1/2 [mask-image:radial-gradient(closest-side,white,transparent)]"
+              aria-hidden="true">
+              <circle cx="512" cy="512" r="512"
+                fill="url(#827591b1-ce8c-4110-b064-7cb85a0b1217)"
+                fill-opacity="0.7">
+              </circle>
+              <defs>
+                <radialgradient id="827591b1-ce8c-4110-b064-7cb85a0b1217">
+                  <stop stop-color="#3b82f6"></stop>
+                  <stop offset="1" stop-color="#1d4ed8"></stop>
+                </radialgradient>
+              </defs>
+            </svg>
+          </div>
+        </div>
+      </section>
+      <section class="data-ip-wrapper">
+
+      </section>
+      <section class="map-wrapper"></section>
+    </div>
+    <script type="module" src="./src/js/index.js"></script>
+  </body>
+</html>
