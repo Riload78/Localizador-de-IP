@@ -67,6 +67,14 @@
       </section>
       <section class="map-wrapper"></section>
     </div>
-    <script type="module" src="./src/js/index.js"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "leaflet": "/node_modules/leaflet/src/Leaflet.js"
+        }
+      }
+    </script>
+    <script type="module" src="./dist/bundle.js"></script>
+</body>
   </body>
 </html>

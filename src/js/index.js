@@ -7,4 +7,8 @@ window.addEventListener('DOMContentLoaded', () => {
   trackerController(ipWrapper)
   mapController(mapWrapper)
 
+  ipWrapper.addEventListener('geodata', (event) =>{
+    console.log(event)
+  })
+
 })

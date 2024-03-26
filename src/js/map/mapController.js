@@ -1,4 +1,4 @@
-import { map } from 'leaflet'
+import L from 'leaflet'
 
 export const mapController = (mapWrapper) => {
     console.log(mapWrapper)

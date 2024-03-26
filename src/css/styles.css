@@ -1,6 +1,7 @@
 @import url('./header.css');
 @import url('./search.css');
 @import url('./geo-detail.css');
+@import url('./map.css');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

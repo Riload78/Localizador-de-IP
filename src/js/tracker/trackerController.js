@@ -6,7 +6,7 @@ export const trackerController = async (ipWrapper) => {
 
   const handlerGetTrackIp = async (latitude, longitude) => {
     const geoData = await getTrackIp()
-    dispatchEvent()
+    dispatchEvent('geodata', geoData, ipWrapper)
     return geoData
   }
   // pedir permiso de geolocalizacion al usuario
