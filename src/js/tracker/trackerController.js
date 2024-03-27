@@ -4,9 +4,12 @@ import { dispatchEvent } from '../../../helper/dispatchEvent.js'
 
 export const trackerController = async (ipWrapper) => {
 
-  const handlerGetTrackIp = async (latitude, longitude) => {
+  const handlerGetTrackIp = async () => {
     const geoData = await getTrackIp()
-    dispatchEvent('geodata', geoData, ipWrapper)
+    const lat = geoData.location.lat
+    const lng = geoData.location.lng
+    
+    dispatchEvent('geodata', {lat, lng}, ipWrapper)
     return geoData
   }
   // pedir permiso de geolocalizacion al usuario
