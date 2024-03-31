@@ -17,7 +17,7 @@ window.addEventListener('DOMContentLoaded', () => {
   searchWrapper.addEventListener('search-data', (event) => {
     console.log(event)
     buildGeoData(event.detail)
-    //handlerPositionMap(event.detail.lat, event.detail.lng)
+    handlerPositionMap(event.detail.location.lat, event.detail.location.lng)
 
   })
 
