@@ -2,7 +2,7 @@ import { getTrackIp } from './trackerModel.js'
 import { buildViewGoeData } from './trackerView.js'
 import { dispatchEvent } from '../../../helper/dispatchEvent.js'
 
-export const trackerController = async (ipWrapper) => {
+export const trackerController =  (ipWrapper) => {
 
   const handlerGetTrackIp = async () => {
     const geoData = await getTrackIp()
@@ -39,11 +39,22 @@ export const trackerController = async (ipWrapper) => {
     ipWrapper.innerHTML = buildViewGoeData(geodata)
   }
 
+  const handlerGeoData = async () => {
+    const geoData = await handlerGetTrackIp()
+    buildGeoData(geoData)
+
+  }
+
   if (typeof navigator.geolocation === 'undefined') {
     console.warn('Geolocación no soportada por este navegador.')
   } else {
-    await browserGeoLocation()
-    const geoData = await handlerGetTrackIp()
-    buildGeoData(geoData)
+    handlerGeoData()
+  }
+  
+
+  return{
+    handlerGeoData,
+    buildGeoData
   }
 }
+

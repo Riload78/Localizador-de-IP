@@ -1,5 +1,6 @@
 import { isValidDomain, isValidIp } from '../helper/validation.js'
 import { getTrackPosition } from '../search/searchModel.js'
+import { dispatchEvent } from '../../../helper/dispatchEvent.js'
 
 
 
@@ -19,6 +20,7 @@ export const searchController = (searchWrapper) => {
     const handlerDataSearch = async (search) => {
         const trackDomainData = await getTrackPosition(search)
         console.log(trackDomainData);
+        dispatchEvent('search-data', trackDomainData, searchWrapper)
     }
     // 1 añadir el evento submit
     const btnSubmit = searchWrapper.querySelector('#submit-search')
