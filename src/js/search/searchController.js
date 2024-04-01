@@ -18,9 +18,15 @@ export const searchController = (searchWrapper) => {
     }
 
     const handlerDataSearch = async (search) => {
-        const trackDomainData = await getTrackPosition(search)
-        console.log(trackDomainData);
-        dispatchEvent('search-data', trackDomainData, searchWrapper)
+        try {
+            const trackDomainData = await getTrackPosition(search)
+            console.log(trackDomainData);
+            dispatchEvent('search-data', trackDomainData, searchWrapper)
+            
+        } catch (error) {
+            console.error(error)
+            dispatchEvent('notification-search', {type:'error', message: error.message})
+        }
     }
     // 1 añadir el evento submit
     const btnSubmit = searchWrapper.querySelector('#submit-search')

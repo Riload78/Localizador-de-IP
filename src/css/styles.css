@@ -2,6 +2,7 @@
 @import url('./search.css');
 @import url('./geo-detail.css');
 @import url('./map.css');
+@import url('./notification.css');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

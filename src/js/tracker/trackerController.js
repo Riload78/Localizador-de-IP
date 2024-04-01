@@ -40,8 +40,14 @@ export const trackerController =  (ipWrapper) => {
   }
 
   const handlerGeoData = async () => {
-    const geoData = await handlerGetTrackIp()
-    buildGeoData(geoData)
+    try {
+      const geoData = await handlerGetTrackIp()
+      buildGeoData(geoData)
+      
+    } catch (error) {
+      console.log(error);
+      dispatchEvent('notification-tracker', {type: 'error', message: error.message}, ipWrapper)
+    }
 
   }
 

@@ -1,0 +1,17 @@
+.notification-wrapper{
+    position: absolute;
+    top:1rem;
+    right: 2rem;
+    .notification-content {
+        @apply flex items-center gap-4 p-3 mb-4 border-t-4;
+        @apply animate-fade-left animate-once animate-ease-in animate-alternate animate-fill-forwards animate-duration-150;
+        &.error{
+            @apply text-red-800  border-red-300 bg-red-50;
+            @apply animate-fade-left animate-once animate-ease-in animate-alternate animate-fill-forwards animate-duration-150;
+        }
+        &.success{
+            @apply text-green-800 border-green-300 bg-green-50;
+            @apply animate-fade-left animate-once animate-ease-in animate-alternate animate-fill-forwards animate-duration-150;
+        }
+    }
+}
